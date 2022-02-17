@@ -25,8 +25,8 @@ async function resolve(promise) {
     return resolved;
 }
 
-export async function getData(date) {
+export async function getData(fechaInicio,fechaFin) {
   return await resolve(
-    instance_nasa.get('/planetary/apod?api_key=DEMO_KEY&date='+date).then((res) => res.data)
+    instance_nasa.get('/planetary/apod?api_key=DEMO_KEY&start_date='+fechaInicio+'&end_date='+fechaFin).then((res) => res.data)
   );
 }
