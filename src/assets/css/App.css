@@ -3,12 +3,20 @@ p{
     font-size: 18px;
 }
 
-.contenedor{
+.row, .row > *{
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+
+.contenedor, .container{
     width: 100%;
+    max-width: 100%;
     text-align: center;
 }
 
-.header{
+.cabecera{
     background-image: url('../img/fondo-cabecera.png');
     background-repeat: no-repeat;
     padding: 15% 0;
@@ -21,7 +29,7 @@ p{
 }
 
 .separador{
-    width: 5%;
+    width: 5% !important;
     background: rgb(13,62,145);
     background: -webkit-linear-gradient(left, rgba(13,62,145,1) 0%, rgba(13,62,144,1) 35%, rgba(247,0,0,1) 100%);
     background: -o-linear-gradient(left, rgba(13,62,145,1) 0%, rgba(13,62,144,1) 35%, rgba(247,0,0,1) 100%);
@@ -31,26 +39,23 @@ p{
     height: 7px;
 }
 
-.fila{
-    width: 1200px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-}
 
 /* Fin Estilos Generales */
 
 /* Estilos Específicos */
+/** Dashboard **/
+/*** Zona de los datepicker ***/
 
 .selectores, .datos-nasa{
-    margin: 50px 0;
+    margin: 50px 0 !important;
 }
 
 .cuerpo h2, .cuerpo h3{
     color: #0d3e90;
+}
+
+.datepicker{
+    margin-top: 20px;
 }
 
 .datepicker, .react-datepicker-ignore-onclickoutside{
@@ -65,14 +70,18 @@ p{
     left
     bottom
     no-repeat;
-  background-size: 100% 2px ;
+  background-size: 100% 2px;
 }
+
+/*** Fin Zona de los datepicker ***/
+
+/*** Zona de las noticias ***/
 
 .datos-nasa{
     background-image: url('../img/fondo-datos.png');
-    background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0;
+    margin-bottom: 0 !important;
 }
 
 .datos-nasa .separador{
@@ -83,11 +92,70 @@ p{
     color: #FFF;
 }
 
+.datos-nasa .row{
+    margin-top: 40px !important;
+}
+
 .subtexto{
     font-style: italic;
-    font-size: 12px;
+    font-size: 11px;
+    color: #FFF;
+    margin-top: 15px;
+}
+
+.imagen-noticia{
+    width: 100%;
+    height: 362px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.noticia-noimage{
+    width: 100%;
+    height: 362px;
+    display: flex;
+    justify-content: center;
+}
+
+.noticia-noimage img{
+    width: 75%;
+    align-self: center;
+}
+
+.titulo-noticia{
+    margin-top: 15px;
+}
+
+.titulo-noticia {
+    margin-top: 15px;
+}
+
+.titulo-noticia, .fecha-noticia, .titulo-noticia a{
     color: #FFF;
 }
+
+.fecha-noticia span{
+    font-style: italic;
+}
+
+/*** Fin Zona de las noticias ***/
+/** Fin Dashboard **/
+
+/** Noticia **/
+.cabecera-noticia{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15% 0;
+}
+
+.boton-volver a{
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+/** Fin Noticia **/
 
 /* Fin Estilos Específicos */
 

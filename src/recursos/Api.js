@@ -25,8 +25,14 @@ async function resolve(promise) {
     return resolved;
 }
 
-export async function getData(fechaInicio,fechaFin) {
+export async function getFullNoticias(fechaInicio,fechaFin) {
   return await resolve(
     instance_nasa.get('/planetary/apod?api_key=DEMO_KEY&start_date='+fechaInicio+'&end_date='+fechaFin).then((res) => res.data)
+  );
+}
+
+export async function getNoticia(fecha) {
+  return await resolve(
+    instance_nasa.get('/planetary/apod?api_key=DEMO_KEY&date='+fecha).then((res) => res.data)
   );
 }
