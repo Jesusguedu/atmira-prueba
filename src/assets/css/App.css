@@ -19,6 +19,7 @@ p{
 .cabecera{
     background-image: url('../img/fondo-cabecera.png');
     background-repeat: no-repeat;
+    background-size: cover;
     padding: 15% 0;
 }
 
@@ -29,7 +30,7 @@ p{
 }
 
 .separador{
-    width: 5% !important;
+    width: 70px !important;
     background: rgb(13,62,145);
     background: -webkit-linear-gradient(left, rgba(13,62,145,1) 0%, rgba(13,62,144,1) 35%, rgba(247,0,0,1) 100%);
     background: -o-linear-gradient(left, rgba(13,62,145,1) 0%, rgba(13,62,144,1) 35%, rgba(247,0,0,1) 100%);
@@ -54,10 +55,13 @@ p{
     color: #0d3e90;
 }
 
+.selectores h3{
+    margin-top: 35px;
+}
+
 .datepicker{
     margin-top: 20px;
 }
-
 .datepicker, .react-datepicker-ignore-onclickoutside{
     border: unset;
     background:
@@ -83,15 +87,12 @@ p{
     padding: 50px 0;
     margin-bottom: 0 !important;
 }
-
 .datos-nasa .separador{
     background: rgb(255,255,255);
 }
-
 .datos-nasa h2{
     color: #FFF;
 }
-
 .datos-nasa .row{
     margin-top: 40px !important;
 }
@@ -110,14 +111,12 @@ p{
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .noticia-noimage{
     width: 100%;
     height: 362px;
     display: flex;
     justify-content: center;
 }
-
 .noticia-noimage img{
     width: 75%;
     align-self: center;
@@ -126,15 +125,12 @@ p{
 .titulo-noticia{
     margin-top: 15px;
 }
-
-.titulo-noticia {
-    margin-top: 15px;
-}
-
 .titulo-noticia, .fecha-noticia, .titulo-noticia a{
     color: #FFF;
 }
-
+.titulo-noticia a:hover{
+    color: #f70000;
+}
 .fecha-noticia span{
     font-style: italic;
 }
@@ -144,56 +140,67 @@ p{
 
 /** Noticia **/
 .cabecera-noticia{
+    background-image: url('../img/fondo-datos.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.oscurecedor{
+    background-color: rgba(0,0,0,0.7);
     padding: 15% 0;
 }
 
-.boton-volver a{
+.breadcrumbs{
     color: #FFF;
+    margin-top: 15px !important;
+    font-size: 16px;
+    font-style: italic;
+}
+.breadcrumbs a{
+    color: #FFF;
+    font-weight: 600;
+}
+.breadcrumbs a:hover{
+    color: #f70000;
+}
+
+.cuerpo-noticia{
+    margin: 50px 0;
+}
+.cuerpo-noticia img{
+    margin: 15px 0;
+    width: 75%;
+    max-width: 100%;
+}
+
+.autor{
+    color: #0d3e91;
+    margin-bottom: 17px;
+}
+.autor span{
+    font-size: 14px;
+    font-style: italic;
+    color: #f70000;
+}
+
+.texto-noticia{
+    text-align: justify;
+}
+
+.boton-volver{
+    border-color: #0d3e91 !important;
+    margin-top: 15px;
+}
+.boton-volver a{
+    color: #0d3e91;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 18px;
 }
+.boton-volver:hover{
+    background-color: #0d3e91 !important;
+}
+.boton-volver a:hover, .boton-volver:hover a{
+    color: #fff;
+}
 /** Fin Noticia **/
-
 /* Fin Estilos Específicos */
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

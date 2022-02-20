@@ -37,7 +37,7 @@ function Dashboard() {
     const conseguirDatosNasa = async() => {
         const res = await API.getFullNoticias(Moment(fechaInicio).format('YYYY-MM-DD'), Moment(fechaFin).format('YYYY-MM-DD'));
         if(res.error != null){
-            toast("Error recopilando datos", { type: "error" });
+            toast("Las fechas deben estar comprendidas entre el 16/6/1995 y "+Moment(new Date()).format('YYYY-MM-DD'), { type: "error" });
         }else{
             toast("Datos recopilados con éxito", { type: "success" });
             setDatos(res.data);
@@ -57,12 +57,12 @@ function Dashboard() {
                 <Container>
                     <h2>Selecciona el rango de fecha del muestreo de datos</h2>
                     <div className="separador"></div>
-                    <Row className="selectores">
-                        <Col>
+                    <Row>
+                        <Col xs={12} md={6} lg={6} xl={6}>
                             <h3>Fecha inicial</h3>
                             <DatePicker className="datepicker" selected={fechaInicio} dateFormat='dd-MM-yyyy' onChange={(date) => setFechaInicio(date)} />
                         </Col>
-                        <Col>
+                        <Col xs={12} md={6} lg={6} xl={6}>
                             <h3>Fecha final</h3>
                             <DatePicker className="datepicker" selected={fechaFin} dateFormat='dd-MM-yyyy' onChange={(date) => setFechaFin(date)} />
                         </Col>

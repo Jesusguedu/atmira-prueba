@@ -1,0 +1,7 @@
+/* Responsive Noticia */
+@media only screen and (max-width: 768px){
+    .video-noticia{
+        width: 100% !important;
+        height: 360px !important;
+    }
+}
